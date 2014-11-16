@@ -109,7 +109,7 @@
     {isRecording}                      true if currently a recording is running on this channel
     -->
     <statusinfo>
-        <area x="{areawidth}*0.98 - {areaheight}*0.40 - 25" y="93%" width="{areaheight}*0.25 + 20" height="5%" layer="2">
+        <area x="{areawidth}*0.98 - {areaheight}*0.40 - 85" y="93%" width="{areaheight}*0.25 + 80" height="5%" layer="2">
             <drawimage condition="{hasVT}" imagetype="icon" path="ico_txton" x="0" y="0" width="{areaheight}" height="{areaheight}"/>
             <drawimage condition="not{hasVT}" imagetype="icon" path="ico_txtoff" x="0" y="0" width="{areaheight}" height="{areaheight}"/>
             <drawimage condition="{isStereo}" imagetype="icon" path="ico_stereoon" x="{areaheight}+5" y="0" width="{areaheight}" height="{areaheight}"/>
@@ -120,6 +120,8 @@
             <drawimage condition="not{isEncrypted}" imagetype="icon" path="ico_fta" x="3*{areaheight}+15" y="0" width="{areaheight}" height="{areaheight}"/>
             <drawimage condition="{isRecording}" imagetype="icon" path="ico_recon" x="4*{areaheight}+20" y="0" width="{areaheight}" height="{areaheight}"/>
             <drawimage condition="not{isRecording}" imagetype="icon" path="ico_recoff" x="4*{areaheight}+20" y="0" width="{areaheight}" height="{areaheight}"/>
+            <drawimage condition="{newmails}" imagetype="icon" path="ico_newmail" x="5*{areaheight}+25" y="0" width="{areaheight}" height="{areaheight}"/>
+            <drawimage condition="not{newmails}" imagetype="icon" path="ico_no_newmail" x="5*{areaheight}+25" y="0" width="{areaheight}" height="{areaheight}"/>
         </area>
     </statusinfo>
 
