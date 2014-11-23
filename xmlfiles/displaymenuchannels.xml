@@ -35,9 +35,7 @@
             </area>
             <!-- channel logo -->
             <area condition="not{separator}" x="5" width="6%" layer="3">
-                <drawimage name="logo" condition="{channellogoexists}" imagetype="channellogo" path="{channelid}" x="0" width="100%" height="100%" valign="center" />
-                <drawimage name="logo" condition="not{channellogoexists}" imagetype="image"  path="{ressourcedir}/images/no_logo.png" x="0" width="100%" height="100%" valign="center" />
-
+                <drawimage name="logo" imagetype="channellogo" path="{channelid}" x="0" width="100%" height="100%" valign="center" />
             </area>
             <area condition="not{separator}" x="5" width="6%" layer="2">
                 <drawimage imagetype="skinpart" path="channellogoback2" x="0" width="100%" height="100%" valign="center" />
@@ -109,10 +107,8 @@
             </area>
             <area x="32%" y="2%" width="67%" height="76%" layer="2">
                 <!-- Logo and Header -->
-                <drawimage name="logo" condition="{channellogoexists}" imagetype="channellogo" path="{channelid}" x="1%" y="1%" width="100%" height="100%" />
-                <drawimage name="logo" condition="not{channellogoexists}" imagetype="channellogo" path="{ressourcedir}/images/no_logo.png" x="1%" y="1%" width="100%" height="100%" />
+                <drawimage name="logo" imagetype="channellogo" path="{channelid}" x="1%" y="1%" width="20%" height="15%" />
                 <drawtext name="channelname" x="23%" y="{height(logo)} * 3 / 10" font="{vdrOsd}" fontsize="10%" color="{clrWhite}" text="{number} - {name}" />
-                <drawtext x="23%" y="{posy(channelname)} + {height(channelname)}" font="{vdrOsd}" fontsize="7%" color="{clrWhite}" text="{sourcedescription}, {tr(transponder)} {transponder}" />
                 <!-- NOW -->
                 <drawtext name="headernow" x="1%" y="{posy(logo)} + {height(logo)} + 10" font="{vdrOsd}" fontsize="6%" color="{clrWhite}" text="{tr(now)}: {presenteventstart} - {presenteventstop}" />
                 <drawtext name="titlenow" x="1%" y="{posy(headernow)} + {height(headernow)}" width="48%" font="{vdrOsd}" fontsize="6%" color="{clrWhite}" text="{presenteventtitle}" />

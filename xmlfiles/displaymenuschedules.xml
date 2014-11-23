@@ -13,7 +13,7 @@
     <header>
         <area x="1%" y="0" width="64%" height="10%" layer="2">
             <drawtext condition="{whatsonnow}||{whatsonnext}" x="5" valign="center" font="{vdrOsd}" fontsize="80%" color="{clrWhite}" text="{title}" />
-            <drawimage name="logo" condition="{whatson}" imagetype="channellogo" path="{channelid}" x="0" height="100%" width="100%" align="left" valign="center" />
+            <drawimage name="logo" condition="{whatson}" imagetype="channellogo" path="{channelid}" x="0" height="100%" width="15%" align="left" valign="center" />
             <drawtext condition="{whatson}" x="{width(logo)}+20" valign="center" font="{vdrOsd}" fontsize="50%" color="{clrWhite}" text="{channelnumber} - {channelname}" />
         </area>
     </header>
