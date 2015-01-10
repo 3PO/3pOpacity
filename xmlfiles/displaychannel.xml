@@ -7,6 +7,10 @@
         <area x="1%" y="74%" width="98%" height="25%" layer="1" transparency="0">
             <drawimage imagetype="skinpart" path="displaychannelback" x="285" y="0" width="84%" height="100%"/>
         </area>
+        <!-- watch background -->
+        <area x="80%" y="1%" width="{areaheight}*0.3" height="{areaheight}*0.3" layer="2">
+            <drawimage imagetype="skinpart" path="watchback" x="0" y="0" width="100%" height="100%"/>
+        </area>
     </background>
     <!-- Available Variables channelinfo:
     {channelnumber}                 Number of Channel, with "-" in case of channel switching
@@ -219,6 +223,24 @@
             <drawimage imagetype="image" path="{mediapath}" x="5" y="5" width="{areawidth}-10" height="{areaheight}-10"/>
         </area>
     </scrapercontent>
+
+    <!-- Available Variables time:
+    {sec}                    current seconds
+    {min}                    current minutes
+    {hour}                   current hours
+    {hmins}                  current "hourminutes" to display an hour hand
+    -->
+    <time>
+        <area x="80%" y="1%" width="{areaheight}*0.3" height="{areaheight}*0.3" layer="5">
+            <drawimage imagetype="skinpart" path="watchhands/s_{sec}" x="0" y="0" width="100%" height="100%"/>
+        </area>
+        <area x="80%" y="1%" width="{areaheight}*0.3" height="{areaheight}*0.3" layer="4">
+            <drawimage imagetype="skinpart" path="watchhands/m_{min}" x="0" y="0" width="100%" height="100%"/>
+        </area>
+        <area x="80%" y="1%" width="{areaheight}*0.3" height="{areaheight}*0.3" layer="3">
+            <drawimage imagetype="skinpart" path="watchhands/h_{hmins}" x="0" y="0" width="100%" height="100%"/>
+        </area>
+    </time>
 
     <!-- Available Variables message:
     {text}                     message text
